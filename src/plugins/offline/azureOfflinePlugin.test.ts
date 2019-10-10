@@ -7,7 +7,7 @@ jest.mock("../../services/offlineService")
 import { OfflineService } from "../../services/offlineService"
 
 
-describe("Azure Offline Plugin", () => {
+describe.skip("Azure Offline Plugin", () => {
   let plugin: AzureOfflinePlugin;
 
   function createPlugin(sls?: Serverless, options?: Serverless.Options) {

@@ -4,10 +4,10 @@ import fs from "fs";
 import request from "request";
 import Serverless from "serverless";
 import { StorageAccountResource } from "../armTemplates/resources/storageAccount";
-import { 
+import {
   ServerlessAzureConfig,
   ServerlessAzureOptions,
-  ServerlessLogOptions 
+  ServerlessLogOptions
 } from "../models/serverless";
 import { constants } from "../shared/constants";
 import { Guard } from "../shared/guard";
@@ -111,7 +111,7 @@ export abstract class BaseService {
    */
   protected log(message: string, options?: ServerlessLogOptions, entity?: string) {
     (this.serverless.cli.log as any)(message, entity, options);
-  }  
+  }
 
   protected prettyPrint(object: any) {
     this.log(JSON.stringify(object, null, 2));

@@ -2,7 +2,7 @@ import Serverless from "serverless";
 import { OfflineIdentityService } from "../../services/offlineIdentityService";
 import { AzureBasePlugin } from "../azureBasePlugin";
 
-export class AzureOfflinePlugin extends AzureBasePlugin {
+export class AzureOfflineKeyVaultPlugin extends AzureBasePlugin {
 
   public constructor(serverless: Serverless, options: Serverless.Options) {
     super(serverless, options);
@@ -55,9 +55,9 @@ export class AzureOfflinePlugin extends AzureBasePlugin {
   }
 
   private async azureOfflineIdentityEval(){
-    if(!this.serverless.service.provider["keyVault"]){
-      return;
-    }
+    // if(!this.serverless.service.provider["keyVault"]){
+    //   return;
+    // }
     const offlineIdentityService = new OfflineIdentityService(this.serverless, this.options);
     await offlineIdentityService.eval();
   }

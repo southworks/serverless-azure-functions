@@ -8,4 +8,6 @@ export const loginHooks = [
   "invoke:invoke",
   "rollback:rollback",
   "remove:remove",
+  "offline:offline",
+  "offline:start:start"
 ]
